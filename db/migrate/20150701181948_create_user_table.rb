@@ -4,8 +4,8 @@ class CreateUserTable < ActiveRecord::Migration
 			t.string :username
 			t.string :email
 			t.string :password
-			t.string :website
-			t.string :specialty
+			
 		end
 	end
 end
+
