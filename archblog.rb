@@ -5,7 +5,7 @@ require './models'
 
 set :database, "sqlite3:archblog.sqlite3"
 
-get '/signup' do
+get '/' do
  erb :signup
 end
 
@@ -18,6 +18,16 @@ post '/signup' do
  else
    "Your password & confirmation did not match, try again"
  end
+end
 
- 
+get '/landing' do
+	erb :landing
+end
+
+get '/login' do
+	erb :login
+end
+
+get '/profile' do
+	erb :profile
 end

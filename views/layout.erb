@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+ <head>
+   <meta charset="UTF-8">
+
+   <link rel="stylesheet" type="text/css" href="styles/archblog.css">
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+   <script src="archblog.js"></script>
+
+   <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+   
+
+ </head>
+
+ <body>
+   <div id="total_wrapper">
+
+     <div id="universal_content_wrapper">
+         
+       <%= yield %>
+
+     </div>
+
+
+     <footer>
+       <ul id="contact_info">
+         <li>ArchBlog, Inc</li>
+         <li>90 John St, Suite 404</li>
+         <li>New York, NY 10038</li>
+         <li>(212) 123-4567</li>
+       </ul>
+     
+       <a id="facebook_link" href="http://www.facebook.com" target="_blank">Like us on Facebook</a>
+     </footer>
+   </div>
+ </body> 
+</html>
