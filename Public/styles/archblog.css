@@ -18,6 +18,18 @@ body {
 
 /*LANDING*/
 
+#post_wrapper {
+  height: 80px;
+  width: 580px;
+  font: Bodoni MT W01 Book;
+}
+
+#post_box {
+  border: 1px red solid;
+   width: 570px;
+   height: 60px;
+   resize: none;
+}
 
 
 
