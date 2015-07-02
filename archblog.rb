@@ -4,7 +4,7 @@ require './models'
 require 'bundler/setup'
 require 'rack-flash'
 
-set :database, "sqlite3:archblog.sqlite3"
+configure(:development){set :database, "sqlite3:ardemo.sqlite3"}
 
 enable :sessions
 
