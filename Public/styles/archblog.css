@@ -3,14 +3,38 @@ body {
  font-size: 12px;
  color: #283B3F ;
  margin: 0px;
+ text-decoration: none;
 }
 
 #total_wrapper {
  width: 1200px;
  margin: 0 auto;
+ text-decoration: none;
 }
 
+a {
+	text-decoration: none;
+}
 
+/* unvisited link */
+a:link {
+    color: #000000;
+}
+
+/* visited link */
+a:visited {
+    color: #000000;
+}
+
+/* mouse over link */
+a:hover {
+    color: #CCCCCC;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
 /*LOGIN*/
 
 
@@ -44,7 +68,26 @@ form {
 
 /*SIGNUP*/
 
+#login {
+	background-color: #CCCCCC;
+	margin: 0px auto;
+	border-radius: 10px;
+	border: solid gray 2px;
+	font-size: 24px;
+	width: 400px;
+	font-size: 24px;
+	text-align: center;
+}
+#logbutton {
+	float: right;
+	border: solid gray 2px;
+	padding: 5px;
+	border-radius: 5px;
+	position: fixed;
+	margin-left: 1125px;
+	margin-top: 0px;
 
+}
 
 
 /*FOOTER BELOW - DONT TOUCH!!*/
