@@ -21,16 +21,17 @@ ActiveRecord::Schema.define(version: 20150701192243) do
   end
 
   create_table "profile", force: :cascade do |t|
-    t.date   "birthday"
-    t.string "website"
-    t.string "specialty"
+    t.date    "birthday"
+    t.string  "website"
+    t.string  "specialty"
+    t.string  "location"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
     t.string "password"
-    t.string "website"
   end
 
 end

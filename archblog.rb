@@ -3,12 +3,19 @@ require 'sinatra/activerecord'
 require './models'
 require 'bundler/setup'
 require 'rack-flash'
+require 'pry'
 
 configure(:development){set :database, "sqlite3:ardemo.sqlite3"}
 
 enable :sessions
 
 use Rack::Flash, sweep: true
+
+def current_user
+  if session[:user_id]
+    User.find session[:user_id]
+  end
+end
 
 get '/' do
  erb :login
@@ -33,7 +40,7 @@ end
 
 get '/landing' do
   # if current_user
-	 erb :landing
+	erb :landing
   #  flash[:notice] = "Welcome, #{@user.username}!"
   # else
   #   redirect '/login'
@@ -41,10 +48,11 @@ get '/landing' do
 end
 
 post '/landing' do
-  
+  #binding.pry
+  body_post = params[:post]
   # @user_post = User_post.find params[:posts] 
-  
-  current_user.posts.create(params[:posts])
+  p params
+  User.first.posts.create(body: body_post[:user_post])
 
 #   begin
 #   if description.length > 150
@@ -69,10 +77,4 @@ delete '/profile/:id' do
   session[:user_id]=nil
   current_user.delete
   redirect '/login'
-end
-
-def current_user
-  if session[:user_id]
-    User.find session[:user_id]
-  end
 end

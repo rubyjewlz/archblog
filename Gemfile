@@ -9,6 +9,7 @@ gem 'rake'
 gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'rack-flash3'
+gem 'pry'
 
 group :development do
  gem 'sqlite3'
