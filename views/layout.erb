@@ -25,7 +25,8 @@
     </div>
 
      <div id="universal_content_wrapper">
-         
+        <%= flash[:notice] if flash[:notice] %>
+
        <%= yield %>
 
      </div>
