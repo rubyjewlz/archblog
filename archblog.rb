@@ -20,11 +20,16 @@ post '/login' do
    username = params[:username]
    password = params[:password]
    @user = User.create(username: username, password: password)
-   "SIGNED UP #{@user.username}"
+   
  else
    "Your password & confirmation did not match, try again"
  end
+
+erb :landing
+#"SIGNED UP #{@user.username}"
 end
+
+
 
 get '/landing' do
 	erb :landing
