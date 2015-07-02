@@ -36,12 +36,6 @@ a:active {
     color: #0000FF;
 }
 /*LOGIN*/
-
-
-
-
-/*LANDING*/
-
 #landingform {
 	width: 400px;
 	height: 425px;
@@ -60,9 +54,11 @@ form {
 	text-align: center;
 }
 
+/*LANDING*/
+
+
 
 /*PROFILE*/
-
 
 
 
@@ -89,9 +85,7 @@ form {
 
 }
 
-
 /*FOOTER BELOW - DONT TOUCH!!*/
-
 
 footer {
  display: inline-block;
