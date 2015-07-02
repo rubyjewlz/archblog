@@ -41,8 +41,20 @@ get '/landing' do
 end
 
 post '/landing' do
-  @new_post = params["user_post"]
+  
+  # @user_post = User_post.find params[:posts] 
+  
+  current_user.posts.create(params[:posts])
 
+#   begin
+#   if description.length > 150
+#     raise "Description too Long"
+#   else
+#     @user_post.update_attributes params[:user_post]
+#   end
+# rescue 
+#   flash[:notice] ="Description too Long"
+# end
 end
 
 get '/profile' do
@@ -53,9 +65,9 @@ post '/profile' do
 
 end
 
-delete '/profile' do
-
+delete '/profile/:id' do
   session[:user_id]=nil
+  current_user.delete
   redirect '/login'
 end
 

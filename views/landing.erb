@@ -1,7 +1,19 @@
-<div id="post_wrapper">
-  <p>Help</p>
-  <form action="/landing" method="POST">
-   <textarea id="post_box" name="user_post" data-validate="required"></textarea>
-  </form>
+<div id="page_wrapper">
+   <p>Post Here:</p>
+  <div id="post_wrapper">
+    <form action="/landing" method="POST">
+     <textarea id="post_box" name="[posts]user_post" placeholder "Enter Text Here..."></textarea>
+    <div id="button_format"> 
+      <input type="submit">
+    </div>
+    </form>
+  </div>
+</div>
 
-  <p>mak</p>
+
+<!--  <%= @all_posts.reverse.each do |p| %>
+ -->
+
+<%= :posts %>
+
+<!-- <%= :end %> -->
